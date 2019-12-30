@@ -62,7 +62,7 @@
 		return '';
 	}
 
-	add_filter('the_generator', 'makzine_wp_rm_v');
+	//add_filter('the_generator', 'makzine_wp_rm_v');
 
 	if ( ! isset( $content_width ) ) {
 	$content_width = 900;

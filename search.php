@@ -12,14 +12,11 @@
 		<div class="container">
 
 			<div class="col-md-8">
-
 					<?php 
-	
+						printf( __( 'Search Results for: %s', 'makzine' ), '<span>' . get_search_query(false) . '</span>' );
 						if(have_posts()):
 						/* translators: %s: The search query. */
-						printf( __( 'Search Results for: %s', 'makzine' ), '<span>' . get_search_query(false) . '</span>' );
 						$totalResults = new WP_Query("s=$s&showposts=0&post_type=post");
-
 					?>
 				<br>
 				<div class="search-details">

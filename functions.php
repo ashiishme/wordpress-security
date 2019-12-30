@@ -22,15 +22,15 @@ require ( get_template_directory() . '/inc/makzine-about-us.php' );
 
 // SECURITY WORDPRESS
 
-// function wha_hide_wp_version() {
-// 	return '';
-// }
-// add_filter('the_generator', 'wha_hide_wp_version');
+function wha_hide_wp_version() {
+	return '';
+}
+add_filter('the_generator', 'wha_hide_wp_version');
 
-// function wha_disable_rest_api( $result ) { 
-// 	if (!is_user_logged_in()) { 
-// 		return new WP_Error('rest_not_logged_in', 'You are not currently logged in.', array('status' => 401)); 
-// 	} 
-// 	return $result; 
-// }
-// add_filter('rest_authentication_errors', 'wha_disable_rest_api');
+function wha_disable_rest_api( $result ) { 
+	if (!is_user_logged_in()) { 
+		return new WP_Error('rest_not_logged_in', 'You are not currently logged in.', array('status' => 401)); 
+	} 
+	return $result; 
+}
+add_filter('rest_authentication_errors', 'wha_disable_rest_api');
